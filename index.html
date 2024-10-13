@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Nunito:400,700,900" rel="stylesheet">
+	<title>Hi, Joriza!</title>
+	<style>
+		* {
+			font-family: "Nunito", sans-serif;
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		.container {
+			width: 100%;
+			height: 100%;
+			float: left;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.clear {
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+		.container-content {
+			float: left;
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 20px;
+			background-color: #ffffff;
+		}
+
+		.button-holder {
+			float: left;
+			width: 100%;
+			text-align: center;
+			height: 100%;
+		}
+
+		.button-holder input {
+			margin: 10px;
+			padding: 10px;
+			border-radius: 5px;
+		}
+
+		.button-holder button {
+			padding: 10px;
+			border: none;
+			cursor: pointer;
+			width: 100px;
+			border-radius: 5px;
+			display: block;
+			margin: 0 auto;
+			color: #ffffff;
+			background: #000000;
+			margin-top: 1em;
+		}
+
+		.container-holder {
+			float: left;
+			text-align: center;
+			width: 100%;
+
+		}
+
+		input#yes {
+			background-color: #48e408c7;
+		}
+
+		input#no {
+			background-color: #f53333;
+		}
+
+		.container-holder h2 {
+			font-size: 2rem;
+			padding: 20px;
+		}
+
+		.two {
+			position: absolute;
+			width: 100%;
+			height: 100vh;
+			background-color: #000000;
+			left: -100%;
+			top: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.two-container {
+			float: left;
+			color: #ffffff;
+			line-height: 32px;
+			font-size: 15px;
+			padding: 0 5%;
+		}
+
+		span.two-next {
+			background-color: green;
+			padding: 10px;
+			border-radius: 10px;
+			color: #fefefe;
+			cursor: pointer;
+		}
+
+		.three {
+			position: absolute;
+			width: 100%;
+			height: 100vh;
+			background-color: #FFFF00;
+			right: -100%;
+			top: 0;
+		}
+
+		.three-container {
+			float: left;
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+
+		span.three-next {
+			background-color: green;
+			padding: 10px;
+			border-radius: 10px;
+			color: #fefefe;
+			cursor: pointer;
+		}
+
+		.four {
+			position: absolute;
+			width: 100%;
+			height: 100vh;
+			background-color: #FFFF00;
+			top: -100%;
+
+		}
+
+		.four-container {
+			float: left;
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+
+		span.four-next {
+			background-color: green;
+			padding: 10px;
+			border-radius: 10px;
+			color: #fefefe;
+			cursor: pointer;
+		}
+
+		.five {
+			position: absolute;
+			width: 100%;
+			height: 100vh;
+			background-color: #FFFF00;
+			bottom: -100%;
+
+		}
+
+		.five-container {
+			float: left;
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+
+		span.five-next {
+			background-color: green;
+			padding: 10px;
+			border-radius: 10px;
+			color: #fefefe;
+			cursor: pointer;
+		}
+
+		.six {
+			position: absolute;
+			width: 100%;
+			height: 100vh;
+			background-color: #FFFF00;
+			display: none;
+
+		}
+
+		.six-container {
+			float: left;
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 20px;
+			text-align: center;
+		}
+
+		span.six-next {
+			background-color: green;
+			padding: 10px;
+			border-radius: 10px;
+			color: #fefefe;
+			cursor: pointer;
+		}
+
+		.seven {
+			position: absolute;
+			width: 100%;
+			height: 100vh;
+			background-color: #7d3bd4;
+			display: none;
+
+		}
+
+		.seven-container {
+			float: left;
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 20px;
+			text-align: center;
+		}
+
+		span.seven-next {
+			background-color: green;
+			padding: 10px;
+			border-radius: 10px;
+			color: #fefefe;
+			cursor: pointer;
+		}
+
+		.image-holder {
+			width: 200px;
+			height: 200px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+		}
+
+		.image-holder img {
+			width: 100%;
+			height: auto;
+		}
+
+		span.first-letter {
+			color: red;
+		}
+
+		@media (max-width: 660px) {}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="container-content">
+			<div class="container-holder">
+				<div class="image-holder">
+
+				</div>
+				<h2>Enter password please</h2>
+				<div class="button-holder">
+					<input type="password" id="password" />
+					<button id="btnEnter">Enter</button>
+				</div>
+			</div>
+		</div>
+		<div class="two">
+			<div id="poem" class="two-container">
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function () {
+
+			// var audio = new Audio('bgmusic.mp3');
+			const poem = `
+			Remembrance of thee through this poem.<br>
+			Elated, blessed, thou art like home.<br>
+			No one can replace such a woman like thee.<br>
+			Eternal, forever, thou art important to me.<br>
+			Thank you for all the memories we had.<br>
+			To all, I'll cherish even the good and the bad.<br>
+			Etched in my thoughts are your memories forever.<br><br>
+			God has made this bond a valuable treasure.<br>
+			In time, you will live the life you truly deserve.<br>
+			Soon these blessings will pour that were reserve.<br>
+			Smile through it all and never forget.<br>
+			I'm grateful to God for your existence, Ms. Nette.<br>
+			Look through these words when you're sad.<br>
+			Lean unto this poem, I gave it all I had.<br>
+			Enough of me, I rest my pen. So long & hope to see you again.<br>
+			`;
+
+			$('button#btnEnter').click(function () {
+				if ($('input#password').val() === "gwapahere") {
+					$('.two').animate({ left: 0 });
+					typeWriter();
+				} else {
+					alert('Wrong password!');
+				}
+			});
+
+			let i = 0, j = 0;
+			let poemLines = poem.split('<br>'); 
+			let speed = 175; 
+
+			function typeWriter() {
+				if (i < poemLines.length) {
+					let line = poemLines[i].trim(); 
+					if (j === 0) {
+						$('div#poem').append('<span id="line-' + i + '"></span><br>');
+						let firstLetter = line.charAt(0);
+						let restOfLine = line.slice(1); 
+						$('#line-' + i).append('<span class="first-letter">' + firstLetter + '</span>');
+						$('#line-' + i).append('<span class="line-content"></span>'); 
+					}
+					if (j < line.length - 1) { 
+						$('.line-content:last').append(line.charAt(j + 1)); 
+						j++;
+						setTimeout(typeWriter, speed); 
+					} else {
+						i++; 
+						j = 0;
+						setTimeout(typeWriter, speed); 
+					}
+				}else{
+					$('div#poem').append('<h5 id="author">- Kibz</h5>')
+				}
+			}
+		})
+	</script>
+</body>
+
+</html>
