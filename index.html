@@ -279,7 +279,7 @@
 		<div class="container-content">
 			<div class="container-holder">
 				<div class="image-holder">
-
+					<img src="bgimage.png"/>
 				</div>
 				<h2>Enter password please</h2>
 				<div class="button-holder">
@@ -296,7 +296,8 @@
 	<script>
 		$(document).ready(function () {
 
-			// var audio = new Audio('bgmusic.mp3');
+			var audio = new Audio('bgmusic.mp3');
+
 			const poem = `
 			Remembrance of thee through this poem.<br>
 			Elated, blessed, thou art like home.<br>
@@ -317,6 +318,7 @@
 
 			$('button#btnEnter').click(function () {
 				if ($('input#password').val() === "gwapahere") {
+					audio.play()
 					$('.two').animate({ left: 0 });
 					typeWriter();
 				} else {
